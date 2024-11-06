@@ -1,0 +1,25 @@
+﻿<Window x:Class="Assignment02.Views.Admin.DetailView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:statusConverter="clr-namespace:Assignment02.Utilities"
+        mc:Ignorable="d"
+        Title="Detail View" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        Background="BlueViolet">
+
+    <Grid>
+        <DataGrid AutoGenerateColumns="False" ItemsSource="{Binding Details}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="BookingReservationID" Width="auto" Binding="{Binding BookingReservationId}"></DataGridTextColumn>
+                <DataGridTextColumn Header="BookingDate" Width="auto" Binding="{Binding BookingReservation.BookingDate}"></DataGridTextColumn>
+                <DataGridTextColumn Header="RoomNumber" Width="auto" Binding="{Binding Room.RoomNumber}"></DataGridTextColumn>
+                <DataGridTextColumn Header="StartDate" Width="auto" Binding="{Binding StartDate}"></DataGridTextColumn>
+                <DataGridTextColumn Header="EndDate" Width="auto" Binding="{Binding EndDate}"></DataGridTextColumn>
+                <DataGridTextColumn Header="ActualPrice" Width="auto" Binding="{Binding ActualPrice}"></DataGridTextColumn>
+                <DataGridTextColumn Header="BookingReservation-fullname" Width="auto" Binding="{Binding BookingReservation.Customer.CustomerFullName}"></DataGridTextColumn>
+                <DataGridTextColumn Header="BookingStatus" Width="auto" Binding="{Binding BookingReservation.BookingStatus, Converter={StaticResource StatusConverter}}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

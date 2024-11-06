@@ -1,0 +1,43 @@
+﻿<Window x:Class="Assignment02.Views.Admin.AdminView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Assignment02.Views.Admin"
+        mc:Ignorable="d"
+        Title="Admin View" Height="500" Width="900" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="LightGray">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <!-- Header section with title and navigation buttons -->
+        <Border Grid.Row="0" Background="#3B5998" Padding="15" CornerRadius="5" Margin="0,0,0,10">
+            <DockPanel>
+
+                <!-- Title -->
+                <TextBlock Text="Admin View" FontSize="16" FontWeight="Bold" Foreground="White" 
+                           HorizontalAlignment="Center" VerticalAlignment="Center" DockPanel.Dock="Left" Margin="10,0,5,0"/>
+
+                <!-- Horizontal StackPanel for buttons -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" DockPanel.Dock="Right" Margin="0,0,5,0">
+                    <Button x:Name="customerBtn" Content="Manage Customer" Click="customerBtn_Click" 
+                            Width="150" Height="40" Margin="5" Background="#5B9BD5" Foreground="White" FontWeight="SemiBold"/>
+                    <Button x:Name="roomBtn" Content="Manage Room" Click="roomBtn_Click" 
+                            Width="150" Height="40" Margin="5" Background="#5B9BD5" Foreground="White" FontWeight="SemiBold"/>
+                    <Button x:Name="bookingBtn" Content="Manage Booking" Click="bookingBtn_Click" 
+                            Width="150" Height="40" Margin="5" Background="#5B9BD5" Foreground="White" FontWeight="SemiBold"/>
+                    <Button x:Name="reportBtn" Content="Manage Report" Click="reportBtn_Click" 
+                            Width="150" Height="40" Margin="5" Background="#5B9BD5" Foreground="White" FontWeight="SemiBold"/>
+                    <Button x:Name="logoutBtn" Content="Logout" Click="logoutBtn_Click" 
+                            Width="100" Height="40" Margin="5" Background="#D9534F" Foreground="White" FontWeight="SemiBold"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+        <!-- Content Frame for navigating pages -->
+        <Frame x:Name="adminFrame" Grid.Row="1" NavigationUIVisibility="Hidden" Background="White" BorderBrush="#DDDDDD" BorderThickness="1" Margin="10"/>
+    </Grid>
+</Window>
