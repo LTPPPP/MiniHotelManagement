@@ -157,3 +157,4 @@ E:\CN\FA24_K5\PRN212\assignment02\Assignment02\Assignment02\obj\Debug\net8.0-win
 E:\CN\FA24_K5\PRN212\assignment02\Assignment02\Assignment02\obj\Debug\net8.0-windows\Assignment02.pdb
 E:\CN\FA24_K5\PRN212\assignment02\Assignment02\Assignment02\obj\Debug\net8.0-windows\Assignment02.genruntimeconfig.cache
 E:\CN\FA24_K5\PRN212\assignment02\Assignment02\Assignment02\obj\Debug\net8.0-windows\ref\Assignment02.dll
+E:\CN\FA24_K5\PRN212\assignment02\Assignment02\Assignment02\obj\Debug\net8.0-windows\Assignment02.sourcelink.json

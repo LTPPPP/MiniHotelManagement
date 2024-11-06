@@ -83,7 +83,7 @@ namespace Assignment02.ViewModels
 				if (NewItem != null && ValidateFields())
 				{
 					NewItem.CustomerId = 0;
-					NewItem.CustomerStatus = "1";
+					NewItem.CustomerStatus = "Active";
 					context.Customers.Add(NewItem);
 					context.SaveChanges();
 					Customers.Add(NewItem);

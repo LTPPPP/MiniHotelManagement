@@ -18,7 +18,7 @@
                 <DataGridTextColumn Header="EndDate" Width="auto" Binding="{Binding EndDate}"></DataGridTextColumn>
                 <DataGridTextColumn Header="ActualPrice" Width="auto" Binding="{Binding ActualPrice}"></DataGridTextColumn>
                 <DataGridTextColumn Header="BookingReservation-fullname" Width="auto" Binding="{Binding BookingReservation.Customer.CustomerFullName}"></DataGridTextColumn>
-                <DataGridTextColumn Header="BookingStatus" Width="auto" Binding="{Binding BookingReservation.BookingStatus, Converter={StaticResource StatusConverter}}"></DataGridTextColumn>
+                <DataGridTextColumn Header="BookingStatus" Width="auto" Binding="{Binding BookingReservation.BookingStatus}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

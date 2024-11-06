@@ -54,11 +54,11 @@
                 <Label>Telephone</Label>
                 <TextBox x:Name="telephoneTxt" Text="{Binding Customer.Telephone, Mode=TwoWay}"/>
             </StackPanel>
-
-            <!-- Birthdate Field -->
+            
+            <!-- Birthdate Display Field -->
             <StackPanel Grid.Column="0" Grid.Row="1" Width="200" Margin="10">
                 <Label>Birthdate</Label>
-                <DatePicker x:Name="birthdatePicker" SelectedDate="{Binding Customer.CustomerBirthday, Mode=TwoWay}"/>
+                <DatePicker Text="{Binding Customer.CustomerBirthday, StringFormat='{}{0:MM/dd/yyyy}' , Mode=TwoWay}" />
             </StackPanel>
 
             <!-- Email Field -->

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Assignment02.Views.Admin"
         mc:Ignorable="d"
-        Title="Admin View" Height="500" Width="900" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="LightGray">
+        Title="Admin View" Height="700" Width="900" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Background="LightGray">
 
     <Grid Margin="10">
         <Grid.RowDefinitions>

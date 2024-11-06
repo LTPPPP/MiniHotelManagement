@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:passwordBoxHelper="clr-namespace:Assignment02.Utilities"
         mc:Ignorable="d"
-        Title="LOGIN" Height="450" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FAFAFA">
+        Title="LOGIN" Height="600" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Background="#FAFAFA">
 
     <Grid>
         <Grid.RowDefinitions>

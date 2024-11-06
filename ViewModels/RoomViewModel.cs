@@ -1,7 +1,5 @@
 ﻿using Assignment02.Models;
 using Assignment02.Utilities;
-using Assignment02.Models;
-using Assignment02.Utilities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Buffers.Text;
@@ -89,6 +87,7 @@ namespace Assignment02.ViewModels
 						room.RoomDetailDescription = NewItem.RoomDetailDescription;
 						room.BookingDetails = NewItem.BookingDetails;
 						room.RoomStatus = NewItem.RoomStatus;
+						Console.WriteLine("New Room Status: " + NewItem.RoomStatus);
 						room.RoomType = NewItem.RoomType;
 						context.Entry(room).State = EntityState.Modified;
 						context.SaveChanges();

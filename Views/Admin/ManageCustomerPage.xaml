@@ -24,7 +24,7 @@
                 <DataGridTextColumn Header="Telephone" Binding="{Binding Telephone}" Width="auto"/>
                 <DataGridTextColumn Header="Email" Binding="{Binding EmailAddress}" Width="auto"/>
                 <DataGridTextColumn Header="Birthday" Binding="{Binding CustomerBirthday}" Width="auto"/>
-                <DataGridTextColumn Header="CustomerStatus" Binding="{Binding CustomerStatus, Converter={StaticResource StatusConverter}}" Width="auto"/>
+                <DataGridTextColumn Header="CustomerStatus" Binding="{Binding CustomerStatus}" Width="auto"/>
             </DataGrid.Columns>
         </DataGrid>
 
@@ -64,13 +64,15 @@
 
                     <StackPanel Grid.Column="1" Grid.Row="1" Margin="10,5">
                         <Label>Email</Label>
-                        <TextBox x:Name="emailTxt" Text="{Binding NewItem.EmailAddress}"/>
+                        <TextBox x:Name="emailTxt" Text="{Binding NewItem.EmailAddress}" IsEnabled="False"/>
                     </StackPanel>
 
+                    <!-- Birthdate Display Field -->
                     <StackPanel Grid.Column="0" Grid.Row="2" Margin="10,5">
                         <Label>Birthdate</Label>
-                        <DatePicker x:Name="birthdate" SelectedDate="{Binding NewItem.CustomerBirthday, Mode=TwoWay}"/>
+                        <DatePicker Text="{Binding NewItem.CustomerBirthday, StringFormat='{}{0:MM/dd/yyyy}', Mode=TwoWay}" />
                     </StackPanel>
+
 
                 </Grid>
             </GroupBox>

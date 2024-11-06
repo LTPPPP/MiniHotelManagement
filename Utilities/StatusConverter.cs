@@ -6,20 +6,16 @@ namespace Assignment02.Utilities
 {
 	public class StatusConverter : IValueConverter
 	{
+		// Convert the database status to a user-friendly display
 		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 		{
-			// Check the status value and return "active" or "inactive"
-			return value is string statusString && statusString == "active" ? "active" : "inactive";
+			return value is string status && status == "1" ? "Available" : "Booked";
 		}
 
+		// Convert the display status back to a storable value for the database
 		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
 		{
-			// Return the string "active" or "inactive" directly without mapping to numbers
-			if (value is string status && (status == "active" || status == "inactive"))
-			{
-				return status;
-			}
-			throw new NotImplementedException();
+			return value is string status && status == "Available" ? "1" : "0";
 		}
 	}
 }

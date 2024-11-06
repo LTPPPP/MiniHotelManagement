@@ -16,7 +16,7 @@
         </Grid.RowDefinitions>
 
         <!-- DataGrid for displaying room details -->
-        <DataGrid ItemsSource="{Binding Rooms}" SelectedItem="{Binding SelectedItem, Mode=OneWayToSource}" AutoGenerateColumns="False" Margin="10">
+        <DataGrid ItemsSource="{Binding Rooms}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}" AutoGenerateColumns="False" Margin="10">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="RoomId" Binding="{Binding RoomId}" Width="auto"></DataGridTextColumn>
                 <DataGridTextColumn Header="Room Number" Binding="{Binding RoomNumber}" Width="auto"></DataGridTextColumn>
@@ -82,12 +82,14 @@
 
             <!-- Room Status ComboBox -->
             <StackPanel Width="150" Grid.Row="2" Grid.Column="1" >
-                <Label>Room Status</Label>
-                <ComboBox x:Name="statusComboBox" SelectedValue="{Binding NewItem.RoomStatus, Mode=TwoWay}" SelectedValuePath="Tag">
-                    <ComboBoxItem Content="Active" Tag="1"/>
-                    <ComboBoxItem Content="Inactive" Tag="0"/>
+                <ComboBox x:Name="statusComboBox" 
+          SelectedValue="{Binding NewItem.RoomStatus, Mode=TwoWay, Converter={StaticResource StatusConverter}}">
+                    <ComboBoxItem Content="Available"/>
+                    <ComboBoxItem Content="Booked"/>
                 </ComboBox>
+
             </StackPanel>
+
 
             <!-- Buttons for Add, Update, Delete -->
             <StackPanel Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Center" Orientation="Horizontal">
